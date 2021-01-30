@@ -1,0 +1,32 @@
+
+.carousel-inner img{
+    margin: auto;
+    padding: 0%;
+    width: 100%;
+    height: 85vh;
+}
+
+.services{ background-color: #F7F7F8;}
+.services h2{ font-size: 38px; font-weight: 300;}
+.services .itembox{ padding: 30px 30px 30px 30px;}
+.services .itembox .icon{ margin-top: 5px; margin-bottom: 15px; min-height: 65px;}
+.services .itembox .arrows{ float:right; height: 30px; width: 18px; text-align: center; right: 0px; position: absolute;}
+
+/* .founders .founder{ background-color: #FFF; border: 1px solid #fe5557; height: 150px; width: 150px; border-radius: 13px; margin: 0px auto; }
+.founders h4, .founders h5 { color: #2782CA; } */
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
+
+.carousel-inner img {
+     width: 100%;
+     height: 95vh;
+ }
+
+ .aboutimg{
+     width : 100%;
+     height: 250px !important;
+ }
+
+ .text{
+     font-size: 20px;
+ }

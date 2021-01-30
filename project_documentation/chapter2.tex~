@@ -1,0 +1,105 @@
+\chapter{Technologies for Vehicular Environment}
+Emerging Vehicular Ad-hoc Networks (VANETs) are representing the preferred network design for Intelligent
+Transportation Systems (ITSs), mainly based on Dedicated Short-Range Communications (DSRC) for Vehicle-to-Vehicle 
+(V2V) communications. Future vehicles will be fully networked, equipped with on-board computers with multiple Network Interface Cards (NICs) for 
+well-deployed wireless technologies (e.g., WiFi, HSDPA) and emerging wireless technologies (e.g., WAVE, WiMaX, LTE).
+\section{DSRC}
+The main benefit of vehicular communication is seen in active safety systems that increase passenger
+safety by exchanging warning messages between vehicles. Other applications and private services are also
+used in order to lower the cost and to encourage vehicular network deployment and adoption. The allocation
+of 75 MHz in the 5.9 GHz frequency band licensed for Dedicated Short-Range Communications (DSRC), 
+which supports seven separate channels, may also enable the future delivery of rich multimedia contents
+to vehicles at short to medium range via vehicular communications. To effectively use limited wireless 
+spectrum and DSRC channels allocated to vehicular communications, and to provision Quality-of-Service (QoS)
+for different vehicular network applications, Medium Access Control (MAC) is one of the major challenges.
+
+In a vehicular network, each vehicle is equipped with the technology that allows the vehicle to communicate
+with others, as well as with the roadside infrastructure, for example, base stations also known as Road-Side
+Units (RSUs) located in some critical sections of the road such as traffic lights, intersections, or
+stop signs to improve the driving experience and make driving safer. By using such communication 
+devices, also known as On-Board Units (OBUs), vehicles can communicate with each other as well as with 
+RSUs. A vehicular network is a self-organized network that enables communications between vehicles and
+RSUs, and the RSUs can be connected to a backbone network, so that many other network applications and 
+services, including Internet access, can be provided to the vehicles. Figure~\ref{fig2.1} shows an example of a vehicular network.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[height=3.0in]{wavefig.png}
+\caption{An Example of a Vehicular Network}
+\label{fig2.1}
+\end{figure}
+
+The US Federal Communications Commission (FCC) recently allocated 75 MHz of DSRC spectrum at 5.9 GHz to 
+be used exclusively for V2V and V2R communications the primary purpose is to enable public safety applications 
+that save lives and improve vehicular traffic flow. Private services are also permitted to lower the network 
+deployment and maintenance costs to encourage DSRC development and adoption. The DSRC spectrum is divided into 
+seven 10-MHz wide channels, as shown in Figure~\ref{fig2.2} Channel 178 is the control channel, which is generally restricted 
+to safety communications only. The two channels at the edges of the spectrum are reserved for future advanced
+accident avoidance applications and high-power public safety communication usages. The rest are service channels
+and are available for both safety and non-safety applications.
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[height=3.5in]{wave7ch.png}
+ %% fig1.png: 1024x768 pixel, 96dpi, 27.09x20.32 cm, bb=
+\caption{DSRC Seven Channel Spectrum}
+\label{fig2.2}
+\end{figure}
+
+\subsection{DSRC Applications}
+There are eight groups identified as DSRC-based ITS applications including:
+\begin{enumerate}  
+\itemsep0em
+  \item Travel and traffic management
+  \item Maintenance and construction operations
+  \item Public transit management
+  \item Electronic payment
+  \item Commercial vehicle operations
+  \item Emergency management
+  \item Advanced vehicle safety systems
+  \item Information management
+\end{enumerate}
+
+These applications also be categorized based on public or private used radio, based on different range (less
+than 15, 15–100, 100–400, and 400–1000 m), based on vehicle type (all vehicles, buses, trains, heavy trucks, 
+and emergency vehicles), or based on safety measures (public safety, private safety,
+warnings, and commercial applications).
+
+Examples within these groups include electronic toll collection, transit vehicle signal priority,
+fuel payment, parking payment, electronic commerce, traffic information, management of public
+transportation and commercial vehicles, fleet management, work zone warning, road condition
+warning, weather information, and border crossing clearance etc.
+
+Currently, public safety applications are the focal point for governments and government driven
+researches. Car manufacturers are more focused on applications enhancing driver experience
+in-vehicle applications like safe lane change, and driver-vehicle-road interaction.The highway electronics
+industry is focused on other issues like toll collection, parking management, and processing
+of electronic payment. The Vehicular Infrastructure Integration (VII) is a consortium of different
+interest groups focused on the interoperability of DSRC and non-DSRC applications.
+\section{IEEE 802.11p}
+For V2X communications, it is inevitable that all participating parties agree on a common standard. 
+Currently standard for this specific type of communication is IEEE 802.11p which was approved on 
+July 2011. Basically it is one amendment within the family of IEEE 802.11 (IEEE 2007) standards that define the
+widely used technology for Wireless Local Area Networks (WLANs). IEEE 802.11p is adapted to the specifics that have 
+to be respected in V2X communications.
+
+IEEE 802.11p is a variant of IEEE 802.11a that additionally covers the specifics of V2X communication, highly dynamic
+and mobile environment, message transmission in an ad-hoc manner, low latency, and operation in a reserved frequency 
+range. These specifics require several adaptations to the standard. Historically, the IEEE 802.11p standard evolved out 
+of the ‘ASTM E2213-03 Standard Specification for Telecommunications and Information Exchange between Roadside and Vehicle
+Systems’ (ASTM 2003) that was transformed into an IEEE compliant style in 2004. In the following years standardization 
+discussion continued, and the first version that successfully passed the IEEE 802 working group letter ballot was draft 
+version 4.0 In July 2010, Amendment 6 is proposed for IEEE 802.11p. Thus, IEEE 802.11p standardized on July 2011.
+\section{IEEE 1609.1, IEEE 1609.2, IEEE 1609.3, and IEEE 1609.4}
+For V2X communication, the IEEE 1609 trial-use standards are developed providing the necessary 
+services on a higher layer within the payload of IEEE 802.11p frames; a short overview is given here:
+\begin{itemize}
+ \item IEEE 1609.1 defines a resource manager that should allow multiple applications run on RSUs to 
+ communicate with the OBUs of multiple vehicles. It serves on the application layer.
+ \item IEEE 1609.2 defines security services for the V2X communication, such as authentication of stations and 
+ encryption of messages.
+ \item IEEE 1609.3 specifies networking services for V2X communication, including a specific stack and protocol 
+ to handle WAVE Short Messages (WSMs).
+ \item IEEE 1609.4 defines how the operation of multiple channels is organized and has a strong relation to the 
+ Enhanced Distributed Channel Access (EDCA) mechanisms.
+\end{itemize}

@@ -1,0 +1,49 @@
+\chapter{Conclusion and Future Works}
+\justifying
+\paragraph{}
+
+We are proposing an algorithm to count nodes round a specific position using wireless technology. 
+These types of algorithms have interested the research community for a long time since they can be used in many 
+applications. During the development of this project some ideas surged to understand better and improve the
+obtained results. Some of these ideas have been used, but due to the limited duration of this project it
+has not been possible to incorporate all of them.
+
+Some of these ideas may constitute future research lines:
+ \vspace{-5mm}
+\begin{itemize}
+\itemsep0em 
+ \item Enhance the algorithm to take advantage of the 7 channels of WAVE (6 channels because the middle channel is 
+ reserved for security).
+ \item Evaluate the performance of the algorithm with authentication and integrity embedded in~it.
+\end{itemize}
+
+\begin{table}
+\parbox{.45\linewidth}{
+\centering
+\begin{tabular}[t]{ccccc}
+\hline
+Task & $T_i$(ms) & $C_i$(ms) & $d_i$(ms) & $P_i$ (3= highest)\\
+\hline
+$T_1$ & 5 & 1 & 5 & 3\\
+$T_3$ & 1000 & 100 & 100 & 1\\
+\hline
+\end{tabular}
+\caption{Tasks based on FPS}
+}
+\newline
+\parbox{.45\linewidth}{
+\centering
+\hspace{5em} 
+\qquad
+\begin{tabular}[t]{ccccc}
+\hline
+Task & $T_i$(ms) & $C_i$(ms) & $d_i$(ms) & $P_i$ \\
+\hline
+$T_{21}$ & 10 & 2 & 10 & 2\\
+$T_{22}$ & 20 & 5 & 45 & 2\\
+$T_{23}$ & 50 & 10 & 50 & 2\\
+\hline
+\end{tabular}
+\caption{Tasks based on EDF with same priorities}
+}
+\end{table}

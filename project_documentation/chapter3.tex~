@@ -1,0 +1,180 @@
+\chapter{Simulation Tools for Vehicular Environment}
+Wireless communication technologies have now greatly impact our daily lives from indoor wireless LANs to outdoor
+cellular mobile networks. Wireless technologies have benefited billions of users around the globe. The era of 
+Vehicular Ad-hoc Networks (VANETs) is now evolving, gaining attention and momentum. Researchers and developers
+have built VANET simulation software to allow the study and evaluation of various media access, routing, and emergency
+warning protocols. VANET simulation is fundamentally different from MANETs (Mobile Ad-hoc Networks) simulation because
+in VANETs, vehicular environment imposes new issues and requirements, such as constrained road topology, multi-path 
+fading and roadside obstacles, traffic flow models, trip models, varying vehicular speed and mobility, traffic lights, 
+traffic congestion, drivers’ behavior, etc. Currently, there are VANET mobility generators, network simulators, and 
+VANET simulators. There are several comparisons of the various publicly available VANET simulation software and 
+their components. In particular, the differences are their software characteristics, Graphical User Interface (GUI), 
+popularity, ease of use, input requirements, output visualization capability, accuracy of simulation, etc. Finally, 
+while each of the studied simulators provides a good simulation environment for VANETs, refinements and further 
+contributions are needed before they can be widely used by the research community.
+
+In the following sections, a brief description of possible network simulation tools 
+(OMNeT++/INETMANET, ns-3, NCTUns, JiST/SWANS)
+and possible traffic simulators (SUMO, VanetMobiSim) is given.
+\section{OMNeT++/INETMANET}
+\justifying
+OMNeT++\cite{omnetpp} is an extensible, modular, component-based C++ simulation library and framework, primarily for building network 
+simulators. ``Network'' is meant in a broader sense that includes wired and wireless communication networks, on-chip networks,
+queuing networks, and so on. Domain-specific functionality such as support for sensor networks, wireless ad-hoc networks, 
+Internet protocols, performance modeling, photonic networks, etc., is provided by model frameworks, developed as independent
+projects. OMNeT++ offers an Eclipse-based IDE, a graphical run-time environment, and plug-ins. There are 
+extensions for real-time simulation, network emulation, alternative programming languages (Java, C\#), database integration,
+SystemC integration, and several other functions. OMNeT++ is free for academic and non-profit use, and it is a widely used 
+platform in the global scientific community, commercial users must obtain license from appropriate authority. OMNEST is the 
+commercial version of OMNeT++, offered by Simulcraft Inc.
+
+The INET Framework is an open-source communication networks simulation package for the OMNeT++ simulation environment.
+It contains models for several wired and wireless networking protocols, including UDP, TCP, SCTP, IP, IPv6, Ethernet, 
+PPP, 802.11, MPLS, OSPF, and many others.
+
+INETMANET is based on INET Framework for OMNEST/OMNeT++ 4.x and continuously developed. Generally it provides the same 
+functionality as the INET Framework, but contains additional protocols and components that are especially useful while
+modeling wireless communication such as:
+ 
+\begin{itemize}
+\itemsep0em 
+ \item Propagation models
+ \item Link layer protocols
+ \item Mobile routing protocols (AODV, DSR, DSDV, BATMAN, DYMO, and OLSR)
+ \item Mobility models
+ \item Application models
+ \item Other modules and changes
+\end{itemize}
+\section{ns-3}
+ns-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use.
+ns-3 is free software, licensed under the GNU GPLv2 license, and is publicly available for research, development, and use.
+The goal of the ns-3 project is to develop a preferred, open simulation environment for networking research. It should
+be aligned with the simulation needs of modern networking research and should encourage community contribution, peer 
+review, and validation of the software. The ns-3 project is committed to building a solid simulation core that is well
+documented, easy to use and debug, 
+and that caters to the needs of the entire simulation work-flow, from simulation configuration to trace collection 
+and analysis.
+Furthermore, the ns-3 software infrastructure encourages the development of simulation models which are sufficiently 
+realistic to allow ns-3 to be used as a real-time network emulator, interconnected with the real world and which allows
+many existing real-world protocol implementations to be reused within ns-3.
+
+The ns-3 simulation core supports research on both IP and non-IP based networks. However, the large majority of its users 
+focused on wireless/IP simulations which involve models for WiFi, WiMaX, or LTE for layers 1 and 2 and a variety of static
+or dynamic routing protocols such as OLSR and AODV for IP-based applications.
+ns-3 also supports a real-time scheduler that facilitates a number of ``simulation-in-the-loop'' use cases for interacting
+with real systems. For instance, users can emit and receive ns-3 generated packets on real network devices, and ns-3 can
+serve as an interconnection framework to add link effects between virtual machines.
+Another emphasis of the simulator is on the reuse of real application and kernel code. Frameworks for running unmodified 
+applications or the entire Linux kernel networking stack within ns-3 are presently being tested and evaluated. Latest 
+version ns-3.15 was released on August 2012.
+\section{NCTUns}
+NCTUns stands for National Chiao Tung University Network Simulator, a network simulator and emulator.
+It was open-source software running on Linux, Fedora 12, with an integrated GUI environment.
+
+NCTUns provide several advantages in front of other network simulators:
+\begin{itemize}
+\itemsep0em
+\item 	Realistic network traffic can be generated by realistic life applications to generate more realistic simulation results.
+\item The performance of any real-life application can be easily evaluated on NCTUns under various simulated network conditions.
+\item Any network application program developed for NCTUns device can be directly run up on a real-life Linux device without any modification.
+\item In its 6.0 release, the simulator provides a complete implementation of the emergent IEEE 802.11p and 1609. X standards for wireless vehicular networks.
+\item It also exists a commercial version of NCTUns, named EstiNet Network Simulator and Emulator, defined as 
+``a software tool for network planning, testing, education, protocol development, and applications performance prediction.
+It is both a network simulator and emulator with worldwide customers and global impact.''
+\end{itemize}
+NCTUns simulates Ethernet-based IP networks with fixed nodes and Point-to-Point links. It simulates IEEE 802.11a/b,
+wireless LAN networks, including both the ad-hoc and infrastructure modes. It simulates GPRS cellular networks, 
+optical networks, including traditional circuit switching optical network and more advanced Optical Burst Switching 
+(OBS) networks.
+
+NCTUns can simulate:
+\begin{itemize}
+\itemsep0em
+ \item IEEE 802.11b wireless mesh networks
+ \item IEEE 802.11e QoS networks, tactical and active mobile ad hoc networks, and wireless networks with directional and steerable antennas.
+ \item 802.16d WiMaX networks, including the PMP and mesh modes.
+ \item 802.16e mobile WiMaX PMP networks.
+ \item 802.16j transparent mode and non-transparent mode relay WiMaX networks.
+ \item DVB-RCS satellite networks for a GEO satellite located 36,000 km above the earth.
+ \item 802.11p/1609.X vehicular networks, which is an amendment to the 802.11-2007 standard for highly mobile environment. Over this platform, one can easily develop and evaluate 
+ advanced V2V and V2I applications in the ITS research field.
+\end{itemize}
+It simulates multi-interface mobile nodes equipped with multiple heterogeneous wireless interfaces. This type of mobile 
+nodes will become common and play an important role in the real life, because they can choose the most cost-effective 
+network to connect to the Internet at any time and at any location.
+
+\section{JiST/SWANS}
+Discrete-event simulators are important scientific tools and the focus of a vast body of computer science research that 
+is directed at their efficient design and execution. The JiST system, which stands for ``Java in Simulation Time'', follows
+a long line of simulation frameworks, languages and systems. JiST is a new Java-based discrete-event simulation engine
+with a number of novel and unique design features. 
+\begin{itemize}
+\itemsep0em
+ \item Entity invocation tracking time:
+No context switching; zero-copy; cross-layer optimizations;
+type-safety; implicit event structures and types
+ \item  Timeless objects packets:
+Saves memory; simplifies memory management
+ \item  Proxy entities network stack:
+Restricts communication pattern; simplifies development
+ \item  Reflection script-based configuration:
+No memory or performance hit; no additional code
+ \item  Continuations socket implementations:
+Run standard Java network applications over simulated network
+\end{itemize}
+
+SWANS is a ``Scalable Wireless Ad hoc Network Simulator''  built atop the JiST platform. It was created primarily because existing
+network simulation tools are not sufficient for current research needs, and its performance serves as a validation of 
+the virtual machine-based approach to simulator construction. SWANS is organized as independent software components
+that can be composed to form complete wireless network or sensor network configurations. Its capabilities are similar 
+to ns-2 and GloMoSim, but are able to simulate much larger networks. SWANS leverages the JiST design to achieve high 
+simulation throughput, save memory, and run standard Java network applications over simulated networks. In addition, 
+SWANS implements a data structure, called hierarchical binning, for efficient computation of signal propagation.
+ 
+\section{SUMO}
+``Simulation of Urban MObility'' or ``SUMO'' for short, is a microscopic road traffic simulation. The work on SUMO's
+design began in the year 2000, with the first implementation being started in the year 2001. In the beginning, 
+SUMO was developed in collaboration between the Center for Applied Informatics Cologne (ZAIK) and the Institute 
+of Transportation Systems (ITS), at the German Aerospace Center (DLR). Since 2004, the work on SUMO is continued at
+the DLR only, though with contribution from external organizations or individuals. SUMO is available as ``open source''
+under the GNU General Public License, both as source code and in compiled, executable form for multiple Windows 
+and Linux platforms. The reason for building an open-source traffic simulation was twofold. While working on traffic
+simulations within the academic field, it was noted that many different, small simulations were developed as tools within
+diploma or doctoral theses, in order to evaluate the objective that was the thesis’ real topic. Often, these simulations
+were incomplete due to the large amount of problems that must be solved for having a complete traffic simulation, and after
+the thesis was completed, the used simulations were not made available to the public and they disappeared. So on the one hand, 
+the work to be done to have a proper traffic scenario being simulated was repeatedly redone, wasting resources and distracting
+from the actual topic of interest. On the other hand, the results of such scientific work are hardly comparable as long 
+as the simulations used to evaluate them have different features, use different (sub-) models and implementation details.
+Because one of the main research areas of the Institute of Transportation Systems was to compare and evaluate different 
+models and algorithms related to traffic and traffic management, the idea was created to develop a free, extensible
+traffic simulation, so that:\\
+(a) Different people may use it as a base test bed for their own applications and \\
+(b) These applications would get more comparable.
+
+This idea and the academic context SUMO is developed within highly influenced design criteria and SUMO’s features.
+As main design criteria, the following were stated:
+\begin{itemize}
+\itemsep0em
+\item 	Portability: The simulation must run on any common environment, because many research organizations were using
+Linux or, at the time the work on SUMO started, Solaris as operating system.
+\item Extensibility: The simulation must be open and easy to understand, so that someone who has not contributed
+to the original development can adapt it fast to his or her own needs.
+\end{itemize}
+
+\section{VanetMobiSim}
+VanetMobiSim is an extension for the CANU Mobility Simulation Environment (CanuMobiSim), a flexible framework for user
+mobility modeling. CanuMobiSim is Java-based and can generate movement traces in different formats, supporting different
+simulation/emulation tools for mobile networks (ns-2, GloMoSim, QualNet, NET). CanuMobiSim originally includes parsers 
+for maps in the Geographical Data Files (GDF) standard and provides implementations of several random mobility models
+as well as models from physics and vehicular dynamics. VanetMobiSim is capable of producing realistic vehicular mobility 
+traces for several network simulators.
+
+The VanetMobiSim extension focuses on vehicular mobility, and features new realistic automotive motion models at both
+macroscopic and microscopic levels. At macroscopic level, VanetMobiSim can import maps from the US Census Bureau
+TIGER/Line database, or randomly generate them using Voronoi tessellation. Also, it adds support for multi-lane roads,
+separate directional flows, differentiated speed constraints and traffic signs at intersections. At microscopic level, 
+VanetMobiSim implements new mobility models, providing realistic C2C and C2I interaction. According to these models, 
+vehicles regulate their speed depending on nearby cars, overtake each other and act according to traffic signs in 
+presence of intersections. VanetMobiSim mobility patterns have been validated against TSIS-CORSIM - a well-known and 
+validated traffic generator - proving the high level of realism reached by VanetMobiSim.

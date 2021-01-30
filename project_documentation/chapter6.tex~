@@ -1,0 +1,34 @@
+\chapter{Open Issues}
+In recent years, there have been an excessive number of contributions related to security in vehicular networks.Most of these researches were 
+based on different techniques designed to improve security and protect communicating members against a number of potential attacks. An effective 
+security mechanism should be able to handle threats targeting the availability, the confidentiality and the authenticity of data in regards to 
+communication between vehicles and infrastructures in a VANET enabled environment. Indeed most security mechanisms available for VANET do not 
+combine Efficiency, Security and Traceability. They tend to score well in their provision of one or two qualities, but not all three because of 
+the potential contradictions between some of their properties, therefore Effective Security is still an ill-defined problem. Security plays an 
+essential role in Vehicular Ad-hoc Networks and in the absence of an effective security mechanism, malicious parties could inject bogus information
+within the network, causing serious accidents.
+
+Secure data communication is a well-researched area in Information Technology, despite the significant volume of devastating attacks that still 
+occur. VANET technologies pose different security threats and requirements therefore create a new research challenge preventing the use of existing 
+network security solutions.
+
+The important issue with the security is the authentication and integrity. Privacy is not important since the propagated information is not relevant 
+for attackers. 
+
+\begin{itemize}
+\itemsep0em
+\item Authentication: This service is concerned with assuring that the origin of a message is correctly identified. Vehicles reactions to events 
+should be based on legitimate messages. This attribute is the core security requirement in VANET.The identity of the nodes in the network must be 
+ensured. Otherwise, it would be possible for an attacker to masquerade a legitimate node in order to send and receive messages on its behalf.
+Authentication is a must in order to achieve the necessary trust in vehicular ad hoc networks. The existence of an authentication service makes 
+it more difficult for attackers to join the network in the first place and thus increases the cost of misbehaviour. Hence, by verifying the authenticity
+of any node before exchanging information, mobile nodes reduce the amount of undesired data\cite{gill}.
+
+\item Integrity: This service assures that system assets and information transmitted over the network cannot be altered by unauthorised parties. 
+Indeed these modifications may include writing, deleting or changing the status of transmitted messages i.e. messages sent over the network should
+not be corrupted. Possible attacks that would compromise their integrity are malicious attacks or signal failures producing errors in the transmission\cite{sp}.
+\end{itemize}
+
+
+
+

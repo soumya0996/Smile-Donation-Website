@@ -32,7 +32,7 @@
 	<div class="container">
     	<div class="row">
       		<div class="col-sm-10">
-          		<h2 class="text-left text-success">Welcome, <?php echo $_SESSION["username"]; ?></h2>
+          		<h2 class="text-left text-success">Welcome, <?php echo $_SESSION["name"]; ?></h2>
       		</div>
        		<div class="col-sm-2">
             	<a href = "home.php" class="btn btn-danger"> LOGOUT </a>

@@ -4,21 +4,21 @@
     include_once("class\utility.php");
     $hg = new Hunger;
 
-if(isset($_POST['name']))
-{
-    $err=false;
-    $name = $_POST['name'];
-    $contact = $_POST['contact'];
-    $items = $_POST['details'];
-    $add = $_POST['addrress'];
+    if(isset($_POST['name']))
+    {
+        $err=false;
+        $name = $_POST['name'];
+        $contact = $_POST['contact'];
+        $items = $_POST['details'];
+        $add = $_POST['addrress'];
 
-    $re = $hg->donate_food($name,$contact,$items,$add);
-}
+        $re = $hg->donate_food($name,$contact,$items,$add);
+    }
 
-else
-{
-    $err=true;
-}
+    else
+    {
+        $err=true;
+    }
 
 ?>
 
@@ -48,12 +48,6 @@ else
 
 <?php 
 
-    // if($err)
-    // {
-    //     echo "<h2 class='text-danger'>  Some Error Occured. </h2>";
-    //     echo "<a href='search_food.php' class='btn btn-danger'> GO BACK </a>";
-    // }
-    
     if(isset($re))
     {
         if($re)
@@ -81,9 +75,7 @@ else
                         </div>
                     </div>
                 </div>
-                <?php
-                // echo "<script>Donor details updated successfully..</script>";
-                echo "<script> alert('Donor details updated successfully..');  </script>";
+                <?php 
             } 
         else
         {

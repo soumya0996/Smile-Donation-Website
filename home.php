@@ -37,19 +37,112 @@
     
     <?php include 'home_navbar.php';?>
     <?php include 'home_imageSlider.php';?>
+
+
+        <div class="w3-container w3-padding-64 w3-theme-l5" id="connect">
+    <section class="my-1">
+        <div class="py-2">
+  		    <h1 class="text-center" style="font-family:  Arial, Helvetica, sans-serif; color: #04868E; padding: 10 px;">Login to your Account to Donate/Receive</h1>
+  	    </div>
+
+  	    <div class="container-fluid">
+  		    <div class="row">
+  			    <div class="col-lg-6 col-md-6 col-sm-12">
+  				    <div class="card">
+  				        <div class="py-5">
+                      		<h2 class="text-center">Sign Up</h2>
+  	                    </div>
+  	                    <div class="w-50 m-auto">
+  			                <form action="userinfo.php" method="post">
+  				                <div class="form-group">
+  					                <label class="text">Username</label>
+  					                <input type="text" name="user" autocomplete="off" class="form-control" required="">
+  			        	        </div>
+  	                			<div class="form-group">
+  				            	    <label class="text">Email</label>
+  				                	<input type="text" name="email" autocomplete="off" class="form-control" required="">
+	  			                </div>
+  				                <div class="form-group">
+  					                <label class="text">Password</label>
+            	     				<input type="password" name="password" autocomplete="off" class="form-control" 	required="">
+  			    	            </div>
+				    	    	<div class="card-body">
+    			        		    <center><button type="submit" class="btn btn-success">Register</center></button>
+  					        	</div>
+  			                </form>
+  	    	            </div> 	
+					</div>
+	            </div>
+
+  		        <div class="col-lg-6 col-md-6 col-sm-12">
+  					<div class="card">
+  						<div class="py-5">
+                	  		<h2 class="text-center">Login</h2>
+  	                	</div>
+	  	                <div class="w-50 m-auto">
+  			                <form action="validation.php" method="post">
+  				                <div class="form-group">
+  					                <label class="text">Username</label>
+  					                <input type="text" name="user" autocomplete="off" class="form-control" required="">
+  	                			</div>
+								<div class="form-group">
+  				            	    <label class="text">Password</label>
+  	                				<input name="password" autocomplete="off" class="form-control" type="password" required=""> 
+	  			                </div>
+								<!-- <div class="form-group">
+									<lable>Login As</lable><br>
+									<select name="donation" style="width: 100%;">
+										<option value="Select">Select</option>
+										<option value="Donor">Donor</option>
+										<option value="Receiver">Receiver</option>
+									</select>  
+								</div> -->
+  	                			
+  			                	<div class="card-body">
+        	                        <center><button type="submit" class="btn btn-primary">Login</button></center>  	
+            	                </div> 
+
+  		        	        </form>
+  	                	</div> 
+	  				</div>
+  				</div>
+  	    	</div>
+	    </div>
+	</section>
+</div>
+<!-- 
     
-    <!-- About Us -->
-            <a name="about"></a>
-            <section class="container-fluid text-center founders breathe">
-                <div class="container" id="about">
-                    <h1 style="padding: .5em; color: #04868E; font-size: 50px;">About Us</h1>
-                    <p><span style="font-size:20px">Smile is a one-stop resource for donations. Through this online platform we seek to popularise the concept of donating for humanity. While monetary donations can be made by people with financial means, donating in kind can be done by practically everyone because item being donated is already in use with us.</span></p>
+    <section class="my-5">
+        <div class="py-3">
+            <h1 class="text-center" style="font-family:  Arial, Helvetica, sans-serif; color: #04868E;">Our Services</h1>
+        </div>
 
-                    <p><span style="font-size:20px">Hereby we have started-off by providing information on donation seekers so that donors can straightaway contact the NGO's which will receive this donations and will provide to the needy. Through this site you can reach a government certified NGO in the city of Indore. However, in due course, we wish to move upwards on the value chain by organizing our own collection centres in major Indian cities, followed by distribution to deserving establishments.</span></p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images\charity.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Want to Donate?</h4>
+                            <p class="card-text">For Everyone who want to Help the One in Need</p>
+                            <center><a  href="sign-up_and_sign-in.php" class="btn btn-primary">DONATE</a></center>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                <div class="col-lg-6 col-md-5 col-12">
+                    <div class="card">
+                        <img class="card-img-top" src="images\Monk_donating_happiness.jpeg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Want to Collect?</h4>
+                            <p class="card-text">For Distributor NGOs forwarding it to the needy</p>
+                            <center><a href="sign-up_and_sign-in.php" class="btn btn-primary">COLLECT</a>  </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-    <?php include 'home_howitworks.php';?>
     <?php include 'footer.php';?>
 
     <script>

@@ -158,7 +158,7 @@
   			                <form action="userinfo.php" method="post">
   				                <div class="form-group">
   					                <label class="text">Username</label>
-  					                <input type="text" name="user" autocomplete="off" class="form-control" required="">
+  					                <input type="text" name="name" autocomplete="off" class="form-control" required="">
   			        	        </div>
   	                			<div class="form-group">
   				            	    <label class="text">Email</label>
@@ -185,14 +185,21 @@
   			                <form action="validation.php" method="post">
   				                <div class="form-group">
   					                <label class="text">Username</label>
-  					                <input type="text" name="user" autocomplete="off" class="form-control" required="">
+  					                <input type="text" name="name" autocomplete="off" class="form-control" required="">
   	                			</div>
-    
-  	                			<div class="form-group">
+								<div class="form-group">
   				            	    <label class="text">Password</label>
   	                				<input name="password" autocomplete="off" class="form-control" type="password" required=""> 
 	  			                </div>
-
+								<div class="form-group">
+									<lable>Login As</lable><br>
+									<select name="donation" style="width: 100%;">
+										<option value="Select">Select</option>
+										<option value="Donor">Donor</option>
+										<option value="Receiver">Receiver</option>
+									</select>  
+								</div>
+  	                			
   			                	<div class="card-body">
         	                        <center><button type="submit" class="btn btn-primary">Login</button></center>  	
             	                </div> 

@@ -15,7 +15,7 @@
 	$time = $_POST['time'];
 	$food_id = $_POST['food_id'];
   	$order = uniqid();
-  	$user = $_SESSION['username']; 
+  	$user = $_SESSION['name']; 
   	$re = $hg->food_ordered($user,$rec_name,$contact,$add,$food_id,$order,$time);
 
   }

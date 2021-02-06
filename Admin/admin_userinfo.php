@@ -15,7 +15,7 @@
 
 	mysqli_select_db($con, 'smiles');
 
-	$name = $_POST['user'];
+	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$pass = $_POST['password'];
 
@@ -26,11 +26,10 @@
 	$num = mysqli_num_rows($result);
 
     if($num == 1){
+    	// echo "Username already Exist";
+		echo "<script> alert('User already Exist');  </script>";
+		header('location:add_user.php');
 		
-    	echo "User already Exist";  
-    	echo "<script> alert('User already Exist');  </script>";	
-		header('location:home.php');
-    	
     }
 
     else {
@@ -38,8 +37,10 @@
 	$qy = "insert into `registered users`(name, email, password) values ('$name', '$email', '$pass') ";
  	
 	mysqli_query($con, $qy); 
+	?><?php
 	echo "<script> alert('User Registeration Successful.');  </script>";
-	header('location:home.php');
+	
+	header('location:add_user.php');
 	
 	}
 ?>
